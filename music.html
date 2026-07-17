@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music — XXEGGN</title>
+    <meta name="description" content="Browse the full album collection by genre — ratings, reviews, and tracklists.">
+    <link rel="icon" href="images/favicon-32.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/hero-buttons.css">
+    <link rel="stylesheet" href="css/retro-home.css">
+    <link rel="stylesheet" href="css/creative-addons.css">
+</head>
+<body>
+
+    <script>
+        if (sessionStorage.getItem("xxeggn-visited")) {
+            document.documentElement.classList.add("no-loader");
+        } else {
+            sessionStorage.setItem("xxeggn-visited", "1");
+        }
+    </script>
+
+    <div id="loader">
+        <div class="loader-rig">
+            <div class="loader-vinyl"></div>
+            <div class="loader-arm"></div>
+        </div>
+        <div class="loader-label">XXEGGN</div>
+    </div>
+
+    <div id="page-veil"></div>
+    <div id="progress-bar"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav>
+        <a href="index.html" class="logo"><span class="logo-mark"></span>XXEGGN</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html" class="active-link">Music</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="panel panel-compact spotlight reveal">
+        <div class="panel-top">
+            <span class="pt-brand"><span class="logo-mark"></span>XXEGGN</span>
+            <span class="pt-mid"><span class="rule"></span><span class="now-spinning"><span class="dot"></span>Now browsing: Pop</span><span class="rule"></span></span>
+            <a href="index.html" class="pt-link">Home <strong>↗</strong></a>
+        </div>
+        <div class="panel-rule"></div>
+
+        <div class="panel-bottom">
+            <span class="sticker sticker-gold tilt-l" style="margin-bottom:14px;">top 3 per genre ✧</span>
+            <h1 class="panel-wordmark">Music</h1>
+            <p class="panel-desc">Pick a genre and drop the needle — each one shows my top three favorite albums. Click any cover for the full review, tracklist, and rating.</p>
+        </div>
+    </header>
+
+    <section class="music-page reveal">
+        <div class="genre-buttons">
+            <button class="genre-btn active" data-genre="pop">Pop</button>
+            <button class="genre-btn" data-genre="rnb">R&amp;B</button>
+            <button class="genre-btn" data-genre="hiphop">Hip-Hop</button>
+            <button class="genre-btn" data-genre="rock">Rock</button>
+        </div>
+
+        <p id="genre-description"></p>
+
+        <div id="genre-content"></div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="album-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-artist"></p>
+            <span class="year-badge" id="modal-year"></span>
+            <p id="modal-genre"></p>
+            <p id="modal-runtime"></p>
+            <div id="modal-rating"></div>
+            <ul id="modal-tracks"></ul>
+            <p id="modal-review"></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-mark">© 2026 XXEGGN</p>
+        <p>Built with HTML, CSS &amp; JavaScript</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/creative-addons.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXEGGN — Music Hub</title>
+    <meta name="description" content="A personal collection of favorite albums, reviews, small projects, and games.">
+    <link rel="icon" href="images/favicon-32.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/hero-buttons.css">
+    <link rel="stylesheet" href="css/path-chooser.css">
+    <link rel="stylesheet" href="css/retro-home.css">
+</head>
+<body>
+
+    <script>
+        if (sessionStorage.getItem("xxeggn-visited")) {
+            document.documentElement.classList.add("no-loader");
+        } else {
+            sessionStorage.setItem("xxeggn-visited", "1");
+        }
+    </script>
+
+    <div id="loader">
+        <div class="loader-rig">
+            <div class="loader-vinyl"></div>
+            <div class="loader-arm"></div>
+        </div>
+        <div class="loader-label">XXEGGN</div>
+    </div>
+
+    <div id="page-veil"></div>
+    <div id="progress-bar"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo"><span class="logo-mark"></span>XXEGGN</a>
+        <ul>
+            <li><a href="index.html" class="active-link">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>SIDE A</span><span>NOW SPINNING: THRILLER</span><span>POP</span><span>R&amp;B</span><span>HIP-HOP</span><span>ROCK</span><span>REWIND FOR MORE</span>
+            <span>SIDE A</span><span>NOW SPINNING: THRILLER</span><span>POP</span><span>R&amp;B</span><span>HIP-HOP</span><span>ROCK</span><span>REWIND FOR MORE</span>
+        </div>
+    </div>
+
+    <!-- PROFILE -->
+    <section class="panel reveal">
+        <div class="panel-top">
+            <span class="pt-brand"><span class="logo-mark"></span>XXEGGN</span>
+            <span class="sticker sticker-violet tilt-l">now spinning</span>
+            <a href="contact.html" class="pt-link">Get in touch <strong>↗</strong></a>
+        </div>
+        <div class="panel-rule"></div>
+
+        <div class="panel-bottom">
+            <div class="panel-wordmark-row">
+                <div class="tape-photo">
+                    <img src="images/profile/me.png" alt="Portrait" class="panel-avatar">
+                </div>
+                <h1 class="panel-wordmark">XXEGGN</h1>
+            </div>
+            <p class="panel-desc">A running record collection, judged one way too harshly.</p>
+        </div>
+    </section>
+
+    <!-- BIO -->
+    <section class="about reveal">
+        <div class="about-copy">
+            <span class="sticker sticker-gold tilt-r">side a: the collector</span>
+            <p class="bio-quote">I sort albums into <span class="marker-highlight">essential</span> and everything else.</p>
+            <p>Music collector, occasional reviewer, and web tinkerer. XXEGGN started as a spreadsheet of albums I didn't want to forget I loved — it's since turned into a habit of rating things too confidently and building small browser toys between reviews.</p>
+            <div class="stat-row">
+                <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Albums Logged</span></div>
+                <div class="stat"><span class="stat-num">4</span><span class="stat-label">Genres Covered</span></div>
+                <div class="stat"><span class="stat-num">2026</span><span class="stat-label">Since</span></div>
+            </div>
+        </div>
+        <div class="vinyl-stage spin tilt-r">
+            <div class="vinyl-record"></div>
+            <div class="orbit-cover"><img src="images/albums/thriller.webp" alt="Thriller"></div>
+            <div class="orbit-cover"><img src="images/albums/okcomputer.webp" alt="OK Computer"></div>
+            <div class="orbit-cover"><img src="images/albums/goodkid.webp" alt="good kid, m.A.A.d city"></div>
+            <div class="orbit-cover"><img src="images/albums/janet.webp" alt="janet."></div>
+        </div>
+    </section>
+
+    <!-- PATH CHOOSER -->
+    <section class="path-chooser reveal">
+        <span class="pc-eyebrow"><span class="pc-spark">✧</span> Find your next favorite <span class="pc-spark">✧</span></span>
+
+        <div class="pc-cards">
+            <a href="music.html" class="pc-card tilt-l">
+                <span class="sticker sticker-gold pc-sticker">pick one ↴</span>
+                <div class="pc-sleeve pc-dark">
+                    <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
+                        <path class="pc-node-line" d="M50 70 H150 V115 H60 V160 H190"></path>
+                        <circle class="pc-node" cx="50" cy="70" r="16"></circle>
+                        <path class="pc-node-fill" d="M50 61 L54 68 L61 68 L55 73 L57 80 L50 76 L43 80 L45 73 L39 68 L46 68 Z"></path>
+                        <circle class="pc-node" cx="120" cy="115" r="22"></circle>
+                        <path class="pc-node-fill" d="M120 126 C104 114 104 100 114 100 C118 100 120 103 120 105 C120 103 122 100 126 100 C136 100 136 114 120 126 Z"></path>
+                        <circle class="pc-node" cx="190" cy="160" r="16"></circle>
+                        <path class="pc-node-fill" d="M190 151 L194 158 L201 158 L195 163 L197 170 L190 166 L183 170 L185 163 L179 158 L186 158 Z"></path>
+                        <circle class="pc-endpoint" cx="50" cy="70" r="2.4" transform="translate(-38,0)"></circle>
+                        <circle class="pc-endpoint" cx="190" cy="160" r="2.4" transform="translate(38,0)"></circle>
+                    </svg>
+                </div>
+                <div class="pc-label-wrap">
+                    <span class="pc-label">Browse by Genre <span class="pc-arrow">↗</span></span>
+                    <small>Pop · R&amp;B · Hip-Hop · Rock</small>
+                </div>
+            </a>
+
+            <a href="games.html" class="pc-card tilt-r">
+                <div class="pc-sleeve pc-light">
+                    <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
+                        <path class="pc-node-line" d="M120 130 L70 80"></path>
+                        <path class="pc-node-line" d="M120 130 L170 75"></path>
+                        <path class="pc-node-line" d="M120 130 L95 185"></path>
+                        <circle class="pc-node" cx="120" cy="130" r="24"></circle>
+                        <path class="pc-node-fill" d="M120 141 C104 129 104 115 114 115 C118 115 120 118 120 120 C120 118 122 115 126 115 C136 115 136 129 120 141 Z"></path>
+                        <circle class="pc-node" cx="70" cy="80" r="16"></circle>
+                        <path class="pc-node-fill" d="M70 71 L74 78 L81 78 L75 83 L77 90 L70 86 L63 90 L65 83 L59 78 L66 78 Z"></path>
+                        <circle class="pc-node" cx="170" cy="75" r="16"></circle>
+                        <path class="pc-node-fill" d="M170 66 L174 73 L181 73 L175 78 L177 85 L170 81 L163 85 L165 78 L159 73 L166 73 Z"></path>
+                        <circle class="pc-node" cx="95" cy="185" r="16"></circle>
+                        <path class="pc-node-fill" d="M95 176 L99 183 L106 183 L100 188 L102 195 L95 191 L88 195 L90 188 L84 183 L91 183 Z"></path>
+                    </svg>
+                </div>
+                <div class="pc-label-wrap">
+                    <span class="pc-label">Play Something <span class="pc-arrow">↗</span></span>
+                    <small>Two small browser games</small>
+                </div>
+            </a>
+
+            <a href="projects.html" class="pc-card tilt-r">
+                <div class="pc-sleeve pc-dark">
+                    <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
+                        <path class="pc-node-line" d="M60 190 C60 90, 120 100, 120 190 C120 100, 180 90, 180 190"></path>
+                        <circle class="pc-node" cx="60" cy="100" r="16"></circle>
+                        <path class="pc-node-fill" d="M60 91 L64 98 L71 98 L65 103 L67 110 L60 106 L53 110 L55 103 L49 98 L56 98 Z"></path>
+                        <circle class="pc-node" cx="120" cy="130" r="22"></circle>
+                        <path class="pc-node-fill" d="M120 141 C104 129 104 115 114 115 C118 115 120 118 120 120 C120 118 122 115 126 115 C136 115 136 129 120 141 Z"></path>
+                        <circle class="pc-node" cx="180" cy="100" r="16"></circle>
+                        <path class="pc-node-fill" d="M180 91 L184 98 L191 98 L185 103 L187 110 L180 106 L173 110 L175 103 L169 98 L176 98 Z"></path>
+                    </svg>
+                </div>
+                <div class="pc-label-wrap">
+                    <span class="pc-label">More Web Builds <span class="pc-arrow">↗</span></span>
+                    <small>Quizzes · tools · other side projects</small>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FEATURED ALBUM -->
+    <section class="panel reveal">
+        <div class="panel-top">
+            <span class="pt-brand">Album of the Moment</span>
+            <span class="pt-mid"><span class="rule"></span>1982<span class="rule"></span></span>
+            <a href="music.html" class="pt-link">Full collection <strong>↗</strong></a>
+        </div>
+
+        <div class="featured reveal" style="margin:40px auto;">
+            <div class="featured-image">
+                <div class="featured-sleeve tilt-l">
+                    <span class="sticker sticker-violet featured-sticker">track of the week</span>
+                    <div class="disc-peek"></div>
+                    <img src="images/albums/thriller.webp" alt="Thriller by Michael Jackson">
+                </div>
+            </div>
+            <div class="featured-text">
+                <h1>Thriller</h1>
+                <h3>Michael Jackson · 1982 · Pop</h3>
+                <p>My favorite pop album of all time. Every track still holds up — there isn't a weak moment on the whole record.</p>
+                <a href="music.html" class="btn">See the Full Collection ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-mark">© 2026 XXEGGN</p>
+        <p>Built with HTML, CSS &amp; JavaScript</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* =====================================================
+   CREATIVE ADD-ONS — shared flourishes for inner pages
+   (Projects / Games / Contact)
+   ===================================================== */
+
+/* ===== AMBIENT ORB FIELD (floating background glow) ===== */
+
+.orb-field{
+    position:absolute;
+    inset:0;
+    z-index:-3;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(38px);
+    opacity:.3;
+    will-change:transform;
+    animation:orbDrift 16s ease-in-out infinite;
+}
+
+.orb.o1{ width:340px; height:340px; background:var(--violet); top:10%; left:8%; }
+.orb.o2{ width:280px; height:280px; background:var(--magenta); bottom:8%; right:10%; animation-delay:3s; }
+.orb.o3{ width:220px; height:220px; background:var(--gold); top:55%; left:46%; opacity:.18; animation-delay:6s; }
+
+@keyframes orbDrift{
+    0%,100%{ transform:translate(0,0) scale(1); }
+    50%{ transform:translate(30px,-20px) scale(1.1); }
+}
+
+/* ===== FLASHLIGHT / SPOTLIGHT (follows cursor) ===== */
+
+.spotlight{ position:relative; isolation:isolate; }
+
+.spotlight::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    opacity:0;
+    transition:opacity .4s var(--ease);
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(139,92,246,.20), transparent 70%);
+}
+
+.spotlight:hover::before{ opacity:1; }
+
+.spotlight > *{ position:relative; z-index:1; }
+
+/* ===== TILT CARD (JS-driven 3D tilt via creative-addons.js) ===== */
+
+.tilt-card{
+    transition:transform .25s var(--ease), box-shadow .25s var(--ease);
+    transform-style:preserve-3d;
+    will-change:transform;
+}
+
+/* ===== GROOVE DIVIDER (vinyl-groove section break) ===== */
+
+.groove-divider{
+    max-width:1240px;
+    margin:20px auto;
+    height:26px;
+    padding:0 56px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.groove-divider span{
+    flex:1;
+    height:1px;
+    background:repeating-linear-gradient(
+        90deg,
+        rgba(196,181,253,.28) 0px,
+        rgba(196,181,253,.28) 6px,
+        transparent 6px,
+        transparent 14px
+    );
+    animation:grooveScroll 4s linear infinite;
+}
+
+.groove-divider .groove-dot{
+    flex:none;
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--violet-2);
+    box-shadow:0 0 10px rgba(139,92,246,.7);
+}
+
+@keyframes grooveScroll{
+    from{ background-position-x:0; }
+    to{ background-position-x:28px; }
+}
+
+/* ===== RANK BADGE (Top 3 marker on music cards) ===== */
+
+.rank-badge{
+    position:absolute;
+    top:10px; left:10px;
+    z-index:3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:30px; height:30px;
+    border-radius:50%;
+    background:var(--grad-signature);
+    color:#fff;
+    font-family:var(--font-mono);
+    font-weight:700;
+    font-size:.85rem;
+    box-shadow:0 6px 16px rgba(76,29,149,.45), inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+/* ===== MINI TICKER STICKER (used inside marquees on inner pages) ===== */
+
+.ticker-sticker{
+    position:relative;
+    top:-1px;
+    margin:0 6px;
+}
+
+@media (max-width:900px){
+    .orb{ display:none; }
+    .groove-divider{ padding:0 24px; }
+}

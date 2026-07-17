@@ -1,0 +1,43 @@
+/* ===== GAMES PAGE ===== */
+
+.game-section{ max-width:900px; margin:0 auto 120px; padding:20px; text-align:center; }
+
+.game-section h2{ font-family:var(--font-display); font-size:2.4rem; margin-bottom:12px; }
+.game-intro{ color:var(--ink-dim); margin-bottom:40px; }
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    max-width:400px;
+    margin:0 auto 24px;
+}
+
+.memory-card{
+    aspect-ratio:1/1;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:2rem;
+    cursor:pointer;
+    transition:transform .3s ease, background .3s ease;
+    user-select:none;
+}
+
+.memory-card:hover{ transform:translateY(-4px); }
+.memory-card.flipped{ background:var(--grad-signature); }
+.memory-card.matched{ background:#22C55E; cursor:default; }
+
+#memory-status, #jump-score{ text-align:center; color:var(--ink-dim); margin-bottom:22px; font-family:var(--font-mono); }
+
+#memory-reset-btn, #jump-start-btn{ display:block; margin:0 auto; }
+
+#jump-canvas{
+    display:block;
+    margin:0 auto 22px;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:18px;
+    max-width:100%;
+}

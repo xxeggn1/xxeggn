@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games — XXEGGN</title>
+    <meta name="description" content="Two small browser games — memory match and a jump game.">
+    <link rel="icon" href="images/favicon-32.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/games.css">
+    <link rel="stylesheet" href="css/hero-buttons.css">
+    <link rel="stylesheet" href="css/retro-home.css">
+    <link rel="stylesheet" href="css/creative-addons.css">
+</head>
+<body>
+    <div class="orb-field"><div class="orb o1"></div><div class="orb o2"></div></div>
+
+    <script>
+        if (sessionStorage.getItem("xxeggn-visited")) {
+            document.documentElement.classList.add("no-loader");
+        } else {
+            sessionStorage.setItem("xxeggn-visited", "1");
+        }
+    </script>
+
+    <div id="loader">
+        <div class="loader-rig">
+            <div class="loader-vinyl"></div>
+            <div class="loader-arm"></div>
+        </div>
+        <div class="loader-label">XXEGGN</div>
+    </div>
+
+    <div id="page-veil"></div>
+    <div id="progress-bar"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav>
+        <a href="index.html" class="logo"><span class="logo-mark"></span>XXEGGN</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="games.html" class="active-link">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>INSERT COIN</span><span>HIGH SCORES</span><span>NO LIBRARIES</span><span>CANVAS + VANILLA JS</span>
+            <span>INSERT COIN</span><span>HIGH SCORES</span><span>NO LIBRARIES</span><span>CANVAS + VANILLA JS</span>
+        </div>
+    </div>
+
+    <header class="panel panel-compact spotlight reveal">
+        <div class="panel-top">
+            <span class="pt-brand"><span class="logo-mark"></span>XXEGGN</span>
+            <span class="pt-mid"><span class="rule"></span>Just for Fun<span class="rule"></span></span>
+            <a href="index.html" class="pt-link">Home <strong>↗</strong></a>
+        </div>
+        <div class="panel-rule"></div>
+
+        <div class="panel-bottom">
+            <span class="sticker sticker-violet tilt-l" style="margin-bottom:14px;">press start ✧</span>
+            <h1 class="panel-wordmark">Games</h1>
+            <p class="panel-desc">A couple of small browser games I built for fun — no libraries, just plain JavaScript.</p>
+        </div>
+    </header>
+
+    <div class="groove-divider"><span></span><span class="groove-dot"></span><span></span></div>
+
+    <section id="memory-game" class="game-section reveal spotlight">
+        <span class="sticker sticker-gold tilt-r" style="margin-bottom:16px;">player one</span>
+        <h2>Memory Match</h2>
+        <p class="game-intro">Flip the cards and find every matching pair.</p>
+        <div class="memory-grid" id="memory-grid"></div>
+        <p id="memory-status">Moves: 0</p>
+        <button id="memory-reset-btn" class="btn">Restart</button>
+    </section>
+
+    <div class="groove-divider"><span></span><span class="groove-dot"></span><span></span></div>
+
+    <section id="jump-game" class="game-section reveal spotlight">
+        <span class="sticker sticker-violet tilt-l" style="margin-bottom:16px;">high score</span>
+        <h2>Jump Game</h2>
+        <p class="game-intro">Press Space or tap the screen to jump over obstacles.</p>
+        <canvas id="jump-canvas" width="600" height="200"></canvas>
+        <p id="jump-score">Score: 0</p>
+        <button id="jump-start-btn" class="btn">Start Game</button>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-mark">© 2026 XXEGGN</p>
+        <p>Built with HTML, CSS &amp; JavaScript</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/creative-addons.js"></script>
+</body>
+</html>
