@@ -716,6 +716,7 @@ body.veil-in #page-veil{ animation:veilIn .5s var(--ease) forwards; }
     .explore-grid{ grid-template-columns:1fr; }
     .social-links{ flex-direction:column; align-items:center; }
 }
+
 /* =====================================================
    HOME — clean bio hero + simple explore row
    ===================================================== */
@@ -873,4 +874,82 @@ body.veil-in #page-veil{ animation:veilIn .5s var(--ease) forwards; }
 @media (max-width:900px){
     .explore-grid{ grid-template-columns:1fr; }
     .home-hero{ flex-direction:column; align-items:flex-start; }
+}
+
+/* ---- album of the moment (compact) ---- */
+
+.aom{
+    max-width:1240px;
+    margin:0 auto 40px;
+    padding:18px 28px 18px 18px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:linear-gradient(180deg,var(--panel),#0C0716);
+    border:1px solid var(--line);
+    border-radius:18px;
+}
+
+.aom-cover{
+    width:64px;
+    height:64px;
+    border-radius:10px;
+    overflow:hidden;
+    flex-shrink:0;
+    box-shadow:0 0 0 1px rgba(196,181,253,.16), 0 10px 24px rgba(76,29,149,.3);
+}
+
+.aom-cover img{ width:100%; height:100%; object-fit:cover; }
+
+.aom-body{ flex:1; min-width:0; }
+
+.aom-eyebrow{
+    display:block;
+    font-family:var(--font-mono);
+    font-size:.68rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--violet-2);
+    margin-bottom:4px;
+}
+
+.aom-body h2{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:1.15rem;
+    margin-bottom:2px;
+}
+
+.aom-body h2 span{
+    font-family:var(--font-body);
+    font-weight:400;
+    font-size:.85rem;
+    color:var(--ink-faint);
+}
+
+.aom-body p{
+    color:var(--ink-dim);
+    font-size:.86rem;
+    margin:0;
+}
+
+.aom-link{
+    flex-shrink:0;
+    font-family:var(--font-mono);
+    font-size:.72rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:9px 16px;
+    transition:border-color .3s ease, color .3s ease;
+}
+
+.aom-link:hover{ border-color:var(--violet-2); color:var(--violet-2); }
+
+@media (max-width:640px){
+    .aom{ flex-wrap:wrap; }
+    .aom-link{ width:100%; text-align:center; }
 }
