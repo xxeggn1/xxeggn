@@ -1,0 +1,125 @@
+/* =====================================================
+   PATH CHOOSER — "browse by genre / play something"
+   Dark-purple reinterpretation of a CD-case dual chooser
+   ===================================================== */
+
+.path-chooser{
+    max-width:1120px;
+    margin:100px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.pc-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    font-family:var(--font-mono);
+    font-size:.8rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    padding:9px 22px;
+    border:1px solid rgba(196,181,253,.22);
+    border-radius:999px;
+    background:rgba(139,92,246,.07);
+    margin-bottom:34px;
+}
+
+.pc-eyebrow .pc-spark{ color:var(--gold); font-size:.9rem; }
+
+.pc-cards{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:56px;
+    flex-wrap:wrap;
+}
+
+.pc-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    text-decoration:none;
+    width:260px;
+    transition:transform .45s var(--ease);
+}
+
+.pc-card:hover{ transform:translateY(-8px); }
+
+.pc-sleeve{
+    position:relative;
+    width:100%;
+    aspect-ratio:1/1.08;
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid rgba(196,181,253,.16);
+    box-shadow:0 26px 60px rgba(0,0,0,.45);
+    transition:box-shadow .45s ease, border-color .45s ease;
+}
+
+.pc-card:hover .pc-sleeve{
+    border-color:rgba(196,181,253,.4);
+    box-shadow:0 30px 70px rgba(139,92,246,.35);
+}
+
+.pc-sleeve::after{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:10%;
+    background:rgba(0,0,0,.28);
+    border-right:1px solid rgba(255,255,255,.05);
+}
+
+.pc-sleeve svg{ position:absolute; inset:0; width:100%; height:100%; }
+
+.pc-sleeve.pc-dark{ background:linear-gradient(160deg,#1C1230,#0B0713); }
+.pc-sleeve.pc-light{ background:linear-gradient(160deg,#E4D9FB,#C9B7F2); }
+
+.pc-node-line{ stroke:rgba(196,181,253,.4); stroke-width:1.4; stroke-dasharray:3 5; fill:none; }
+.pc-light .pc-node-line{ stroke:rgba(76,29,149,.35); }
+
+.pc-node{ fill:var(--void); stroke:var(--violet-2); stroke-width:1.6; }
+.pc-light .pc-node{ fill:#E4D9FB; stroke:var(--violet-deep); }
+
+.pc-node-fill{ fill:var(--violet-2); }
+.pc-light .pc-node-fill{ fill:var(--violet-deep); }
+
+.pc-endpoint{ fill:var(--gold); }
+
+.pc-label{
+    font-family:var(--font-display);
+    font-size:1.3rem;
+    font-weight:600;
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.pc-label small{
+    font-family:var(--font-mono);
+    font-size:.72rem;
+    letter-spacing:.08em;
+    color:var(--ink-faint);
+    font-weight:400;
+    text-transform:uppercase;
+    display:block;
+    margin-top:4px;
+}
+
+.pc-label-wrap{ display:flex; flex-direction:column; align-items:center; }
+
+.pc-card .pc-arrow{
+    color:var(--violet-2);
+    transition:transform .35s var(--ease);
+}
+
+.pc-card:hover .pc-arrow{ transform:translateX(5px); }
+
+@media (max-width:700px){
+    .pc-cards{ gap:36px; }
+    .pc-card{ width:78vw; max-width:280px; }
+}

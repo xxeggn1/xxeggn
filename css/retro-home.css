@@ -1,0 +1,121 @@
+/* =====================================================
+   RETRO HOME — mixtape / liner-notes flourishes
+   Signature element: the hand-labeled sticker + taped photo
+   ===================================================== */
+
+.marquee-track span{ color:var(--ink-faint); }
+.marquee-track span::after{ content:"◆"; }
+
+/* ===== STICKER (signature element) ===== */
+
+.sticker{
+    display:inline-block;
+    font-family:"Permanent Marker",cursive;
+    font-weight:400;
+    text-transform:lowercase;
+    letter-spacing:.01em;
+    font-size:1rem;
+    padding:8px 18px 10px;
+    border-radius:3px;
+    box-shadow:0 8px 18px rgba(0,0,0,.35);
+    white-space:nowrap;
+}
+
+.sticker-violet{
+    background:var(--violet-2);
+    color:#1A0E33;
+}
+
+.sticker-gold{
+    background:var(--gold);
+    color:#3A2A05;
+}
+
+.tilt-l{ transform:rotate(-3deg); }
+.tilt-r{ transform:rotate(2.5deg); }
+
+/* ===== TAPED PHOTO ===== */
+
+.tape-photo{
+    position:relative;
+    display:inline-block;
+    transform:rotate(-4deg);
+    flex-shrink:0;
+    transition:transform .35s var(--ease);
+}
+
+.tape-photo:hover{ transform:rotate(0deg) scale(1.03); }
+
+.tape-photo::before{
+    content:"";
+    position:absolute;
+    top:-12px; left:50%;
+    transform:translateX(-50%) rotate(-6deg);
+    width:56px; height:20px;
+    background:rgba(232,193,92,.55);
+    border:1px solid rgba(232,193,92,.7);
+    box-shadow:0 3px 6px rgba(0,0,0,.25);
+    z-index:2;
+}
+
+.panel-avatar{ border-radius:8px; border-width:4px; }
+
+/* ===== MARKER HIGHLIGHT (on the bio quote) ===== */
+
+.marker-highlight{
+    position:relative;
+    font-style:normal;
+    white-space:nowrap;
+}
+
+.marker-highlight::after{
+    content:"";
+    position:absolute;
+    left:-4px; right:-4px; bottom:2px;
+    height:.5em;
+    background:rgba(139,92,246,.35);
+    z-index:-1;
+    transform:rotate(-1deg);
+    border-radius:2px;
+}
+
+/* ===== PATH-CHOOSER STICKER + TILT ===== */
+
+.pc-card{ position:relative; }
+.pc-card.tilt-l .pc-sleeve, .pc-card.tilt-r .pc-sleeve{ transition:transform .4s var(--ease); }
+.pc-card.tilt-l .pc-sleeve{ transform:rotate(-2.5deg); }
+.pc-card.tilt-r .pc-sleeve{ transform:rotate(2deg); }
+.pc-card:hover .pc-sleeve{ transform:rotate(0deg) translateY(-4px); }
+
+.pc-sticker{
+    position:absolute;
+    top:-14px; left:-10px;
+    z-index:3;
+    font-size:.85rem;
+    padding:6px 14px 8px;
+}
+
+/* ===== FEATURED STICKER + TILT ===== */
+
+.featured-sleeve{ transition:transform .4s var(--ease); }
+.featured-sleeve.tilt-l{ transform:rotate(-2deg); }
+.featured-sleeve:hover{ transform:rotate(0deg); }
+
+.featured-sticker{
+    position:absolute;
+    top:-16px; right:-18px;
+    z-index:3;
+    font-size:.85rem;
+}
+
+/* ===== BIO SECTION TILT ===== */
+
+.about .vinyl-stage.tilt-r{ transform:rotate(2deg); }
+
+@media (max-width:900px){
+    .tilt-l, .tilt-r{ transform:none; }
+    .pc-card.tilt-l .pc-sleeve, .pc-card.tilt-r .pc-sleeve{ transform:none; }
+    .featured-sleeve.tilt-l{ transform:none; }
+    .about .vinyl-stage.tilt-r{ transform:none; }
+    .tape-photo{ transform:rotate(-3deg); }
+}
