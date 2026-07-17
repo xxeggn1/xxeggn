@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XXEGGN — Music Hub</title>
-    <meta name="description" content="A personal collection of favorite albums, reviews, small projects, and games.">
+    <title>XXEGGN — IT Student &amp; Web Developer</title>
+    <meta name="description" content="Personal site of Akira (xxeggn) — IT student and web developer. Projects, music taste, and small browser games.">
     <link rel="icon" href="images/favicon-32.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/hero-buttons.css">
-    <link rel="stylesheet" href="css/path-chooser.css">
-    <link rel="stylesheet" href="css/retro-home.css">
+    <link rel="stylesheet" href="css/creative-addons.css">
 </head>
 <body>
 
@@ -52,144 +51,79 @@
         </ul>
     </nav>
 
-    <div class="marquee">
-        <div class="marquee-track">
-            <span>SIDE A</span><span>NOW SPINNING: THRILLER</span><span>POP</span><span>R&amp;B</span><span>HIP-HOP</span><span>ROCK</span><span>REWIND FOR MORE</span>
-            <span>SIDE A</span><span>NOW SPINNING: THRILLER</span><span>POP</span><span>R&amp;B</span><span>HIP-HOP</span><span>ROCK</span><span>REWIND FOR MORE</span>
-        </div>
-    </div>
+    <div class="orb-field"><div class="orb o1"></div><div class="orb o2"></div></div>
 
-    <!-- PROFILE -->
+    <!-- HERO -->
     <section class="panel reveal">
         <div class="panel-top">
             <span class="pt-brand"><span class="logo-mark"></span>XXEGGN</span>
-            <span class="sticker sticker-violet tilt-l">now spinning</span>
+            <span class="pt-mid"><span class="rule"></span>EST. 2026<span class="rule"></span></span>
             <a href="contact.html" class="pt-link">Get in touch <strong>↗</strong></a>
         </div>
         <div class="panel-rule"></div>
 
-        <div class="panel-bottom">
-            <div class="panel-wordmark-row">
-                <div class="tape-photo">
-                    <img src="images/profile/me.png" alt="Portrait" class="panel-avatar">
+        <div class="home-hero">
+            <img src="images/profile/me.png" alt="Portrait" class="home-avatar">
+            <div>
+                <span class="home-eyebrow">IT Student · Web Developer <span>Bugallon, PH</span></span>
+                <h1>Hi, I'm Akira.<br>I build things for <em>the browser.</em></h1>
+                <p>Currently studying IT and spending most of my free time building small, slightly overengineered web apps — API integrations, UI experiments, and whatever idea won't leave me alone that week.</p>
+                <div class="home-stack">
+                    <span>HTML / CSS / JS</span>
+                    <span>API Integration</span>
+                    <span>UI/UX Design</span>
+                    <span>GitHub Pages</span>
                 </div>
-                <h1 class="panel-wordmark">XXEGGN</h1>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn">See my projects ↗</a>
+                    <a href="https://github.com/xxeggn1" class="btn btn-outline" target="_blank" rel="noopener">GitHub ↗</a>
+                </div>
             </div>
-            <p class="panel-desc">A running record collection, judged one way too harshly.</p>
         </div>
     </section>
 
-    <!-- BIO -->
-    <section class="about reveal">
-        <div class="about-copy">
-            <span class="sticker sticker-gold tilt-r">side a: the collector</span>
-            <p class="bio-quote">I sort albums into <span class="marker-highlight">essential</span> and everything else.</p>
-            <p>Music collector, occasional reviewer, and web tinkerer. XXEGGN started as a spreadsheet of albums I didn't want to forget I loved — it's since turned into a habit of rating things too confidently and building small browser toys between reviews.</p>
-            <div class="stat-row">
-                <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Albums Logged</span></div>
-                <div class="stat"><span class="stat-num">4</span><span class="stat-label">Genres Covered</span></div>
-                <div class="stat"><span class="stat-num">2026</span><span class="stat-label">Since</span></div>
-            </div>
-        </div>
-        <div class="vinyl-stage spin tilt-r">
-            <div class="vinyl-record"></div>
-            <div class="orbit-cover"><img src="images/albums/thriller.webp" alt="Thriller"></div>
-            <div class="orbit-cover"><img src="images/albums/okcomputer.webp" alt="OK Computer"></div>
-            <div class="orbit-cover"><img src="images/albums/goodkid.webp" alt="good kid, m.A.A.d city"></div>
-            <div class="orbit-cover"><img src="images/albums/janet.webp" alt="janet."></div>
-        </div>
-    </section>
-
-    <!-- PATH CHOOSER -->
-    <section class="path-chooser reveal">
-        <span class="pc-eyebrow"><span class="pc-spark">✧</span> Find your next favorite <span class="pc-spark">✧</span></span>
-
-        <div class="pc-cards">
-            <a href="music.html" class="pc-card tilt-l">
-                <span class="sticker sticker-gold pc-sticker">pick one ↴</span>
-                <div class="pc-sleeve pc-dark">
-                    <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
-                        <path class="pc-node-line" d="M50 70 H150 V115 H60 V160 H190"></path>
-                        <circle class="pc-node" cx="50" cy="70" r="16"></circle>
-                        <path class="pc-node-fill" d="M50 61 L54 68 L61 68 L55 73 L57 80 L50 76 L43 80 L45 73 L39 68 L46 68 Z"></path>
-                        <circle class="pc-node" cx="120" cy="115" r="22"></circle>
-                        <path class="pc-node-fill" d="M120 126 C104 114 104 100 114 100 C118 100 120 103 120 105 C120 103 122 100 126 100 C136 100 136 114 120 126 Z"></path>
-                        <circle class="pc-node" cx="190" cy="160" r="16"></circle>
-                        <path class="pc-node-fill" d="M190 151 L194 158 L201 158 L195 163 L197 170 L190 166 L183 170 L185 163 L179 158 L186 158 Z"></path>
-                        <circle class="pc-endpoint" cx="50" cy="70" r="2.4" transform="translate(-38,0)"></circle>
-                        <circle class="pc-endpoint" cx="190" cy="160" r="2.4" transform="translate(38,0)"></circle>
+    <!-- EXPLORE -->
+    <section class="explore reveal">
+        <span class="explore-eyebrow">Elsewhere on this site</span>
+        <div class="explore-grid">
+            <a href="projects.html" class="explore-card">
+                <div class="explore-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="7" width="32" height="22" rx="3" stroke="#8B5CF6" stroke-width="2"/>
+                        <path d="M14 33h12M20 29v4" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12 17l-4 4 4 4M28 17l4 4-4 4M22 14l-4 14" stroke="#A78BFA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="pc-label-wrap">
-                    <span class="pc-label">Browse by Genre <span class="pc-arrow">↗</span></span>
-                    <small>Pop · R&amp;B · Hip-Hop · Rock</small>
-                </div>
+                <h3>Projects</h3>
+                <p>Quizzes, tools, and other side builds — mostly things I wanted to exist.</p>
+                <span class="explore-go">View projects ↗</span>
             </a>
 
-            <a href="games.html" class="pc-card tilt-r">
-                <div class="pc-sleeve pc-light">
-                    <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
-                        <path class="pc-node-line" d="M120 130 L70 80"></path>
-                        <path class="pc-node-line" d="M120 130 L170 75"></path>
-                        <path class="pc-node-line" d="M120 130 L95 185"></path>
-                        <circle class="pc-node" cx="120" cy="130" r="24"></circle>
-                        <path class="pc-node-fill" d="M120 141 C104 129 104 115 114 115 C118 115 120 118 120 120 C120 118 122 115 126 115 C136 115 136 129 120 141 Z"></path>
-                        <circle class="pc-node" cx="70" cy="80" r="16"></circle>
-                        <path class="pc-node-fill" d="M70 71 L74 78 L81 78 L75 83 L77 90 L70 86 L63 90 L65 83 L59 78 L66 78 Z"></path>
-                        <circle class="pc-node" cx="170" cy="75" r="16"></circle>
-                        <path class="pc-node-fill" d="M170 66 L174 73 L181 73 L175 78 L177 85 L170 81 L163 85 L165 78 L159 73 L166 73 Z"></path>
-                        <circle class="pc-node" cx="95" cy="185" r="16"></circle>
-                        <path class="pc-node-fill" d="M95 176 L99 183 L106 183 L100 188 L102 195 L95 191 L88 195 L90 188 L84 183 L91 183 Z"></path>
+            <a href="music.html" class="explore-card">
+                <div class="explore-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="15" stroke="#8B5CF6" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="4" fill="#A78BFA"/>
                     </svg>
                 </div>
-                <div class="pc-label-wrap">
-                    <span class="pc-label">Play Something <span class="pc-arrow">↗</span></span>
-                    <small>Two small browser games</small>
-                </div>
+                <h3>Music</h3>
+                <p>Albums I keep coming back to, sorted by genre and rated too confidently.</p>
+                <span class="explore-go">Browse albums ↗</span>
             </a>
 
-            <a href="projects.html" class="pc-card tilt-r">
-                <div class="pc-sleeve pc-dark">
-                    <svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg">
-                        <path class="pc-node-line" d="M60 190 C60 90, 120 100, 120 190 C120 100, 180 90, 180 190"></path>
-                        <circle class="pc-node" cx="60" cy="100" r="16"></circle>
-                        <path class="pc-node-fill" d="M60 91 L64 98 L71 98 L65 103 L67 110 L60 106 L53 110 L55 103 L49 98 L56 98 Z"></path>
-                        <circle class="pc-node" cx="120" cy="130" r="22"></circle>
-                        <path class="pc-node-fill" d="M120 141 C104 129 104 115 114 115 C118 115 120 118 120 120 C120 118 122 115 126 115 C136 115 136 129 120 141 Z"></path>
-                        <circle class="pc-node" cx="180" cy="100" r="16"></circle>
-                        <path class="pc-node-fill" d="M180 91 L184 98 L191 98 L185 103 L187 110 L180 106 L173 110 L175 103 L169 98 L176 98 Z"></path>
+            <a href="games.html" class="explore-card">
+                <div class="explore-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="13" width="32" height="16" rx="8" stroke="#8B5CF6" stroke-width="2"/>
+                        <path d="M12 21h6M15 18v6" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round"/>
+                        <circle cx="27" cy="18" r="1.6" fill="#A78BFA"/>
+                        <circle cx="30" cy="21" r="1.6" fill="#A78BFA"/>
                     </svg>
                 </div>
-                <div class="pc-label-wrap">
-                    <span class="pc-label">More Web Builds <span class="pc-arrow">↗</span></span>
-                    <small>Quizzes · tools · other side projects</small>
-                </div>
+                <h3>Games</h3>
+                <p>Two small browser games built from scratch — no libraries, just JS.</p>
+                <span class="explore-go">Play now ↗</span>
             </a>
-        </div>
-    </section>
-
-    <!-- FEATURED ALBUM -->
-    <section class="panel reveal">
-        <div class="panel-top">
-            <span class="pt-brand">Album of the Moment</span>
-            <span class="pt-mid"><span class="rule"></span>1982<span class="rule"></span></span>
-            <a href="music.html" class="pt-link">Full collection <strong>↗</strong></a>
-        </div>
-
-        <div class="featured reveal" style="margin:40px auto;">
-            <div class="featured-image">
-                <div class="featured-sleeve tilt-l">
-                    <span class="sticker sticker-violet featured-sticker">track of the week</span>
-                    <div class="disc-peek"></div>
-                    <img src="images/albums/thriller.webp" alt="Thriller by Michael Jackson">
-                </div>
-            </div>
-            <div class="featured-text">
-                <h1>Thriller</h1>
-                <h3>Michael Jackson · 1982 · Pop</h3>
-                <p>My favorite pop album of all time. Every track still holds up — there isn't a weak moment on the whole record.</p>
-                <a href="music.html" class="btn">See the Full Collection ↗</a>
-            </div>
         </div>
     </section>
 
